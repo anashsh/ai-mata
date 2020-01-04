@@ -162,7 +162,7 @@
                     <div class="col-sm-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h5>Probalilitas</h5>
+                                <h5>Probabilitas</h5>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-striped table-bordered">
