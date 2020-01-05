@@ -53,7 +53,7 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- Header -->
   <div class="header">
     <div class="container">
       <a href="index.php">(o_o) Identifikasi Penyakit Mata dengan Algoritma Naive Bayes (o_o)</a>
