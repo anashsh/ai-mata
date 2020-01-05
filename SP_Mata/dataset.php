@@ -21,16 +21,44 @@
   <link href="css/bootstrap4/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap3/bootstrap.min.css" rel="stylesheet">
 
+  <style>
+    .header {
+      overflow: hidden;
+      background-color: #343a40;
+      padding: 10px 10px;
+      text-align: center;
+    }
+
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white; 
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="header">
     <div class="container">
-      <a class="navbar-brand" href="index.php">(o_o) Identifikasi Penyakit Mata dengan Algoritma Naive Bayes (o_o)</a>
+      <a href="index.php">(o_o) Identifikasi Penyakit Mata dengan Algoritma Naive Bayes (o_o)</a>
     </div>
-  </nav>
+  </div>
 
   <!-- Page Content -->
   <div class="container">
