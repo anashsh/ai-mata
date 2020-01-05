@@ -29,9 +29,6 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.php">(o_o) Identifikasi Penyakit Mata dengan Algoritma Naive Bayes (o_o)</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </div>
   </nav>
 
@@ -47,6 +44,7 @@
           <a href="penyakit.php" class="list-group-item active">Data Penyakit</a>
           <a href="gejala.php" class="list-group-item">Data Gejala</a>
           <a href="dataset.php" class="list-group-item">Dataset</a>
+          <a href="about.php" class="list-group-item">Tentang Kami</a>
         </div>
       </div>
       <!-- /.col-lg-3 -->
@@ -54,42 +52,47 @@
       <div class="col-lg-9">
         <div class="card mt-4">
           <form method="#" action="#">
-              <h2>Daftar Penyakit</h2>
-              <table class="table table-striped table-bordered" cellspacing="0" width="100%">
-                <thead>
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                    <center><h2>Daftar Penyakit</h2></center>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">No
+                            </th>
+                            <th class="th-sm">Kode Penyakit
+                            </th>
+                            <th class="th-sm">Nama Penyakit
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                  <?php
+                      $a=0;
+                      while($db_row = mysqli_fetch_array($query)) {
+                  ?>
                     <tr>
-                        <th class="th-sm">No
-                        </th>
-                        <th class="th-sm">Kode Penyakit
-                        </th>
-                        <th class="th-sm">Nama Penyakit
-                        </th>
+                        <td>
+                            <?php echo $a+1; ?>
+                        </td>
+                        <td>
+                            <?php echo $db_row["Kode_Penyakit"]; ?>
+                        </td>
+                        <td>
+                            <?php echo $db_row["Nama_Penyakit"]; ?>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-              <?php
-                  $a=0;
-                  while($db_row = mysqli_fetch_array($query)) {
-              ?>
-                <tr>
-                    <td>
-                        <?php echo $a+1; ?>
-                    </td>
-                    <td>
-                        <?php echo $db_row["Kode_Penyakit"]; ?>
-                    </td>
-                    <td>
-                        <?php echo $db_row["Nama_Penyakit"]; ?>
-                    </td>
-                </tr>
-              <?php
-                  $a++;
-              }
-              ?>
-                </tbody>
-            </table>
+                  <?php
+                      $a++;
+                  }
+                  ?>
+                    </tbody>
+                </table>
+              </div>
+            </div>
           </form>
-          </div>
         </div>
         <!-- /.card -->
 
